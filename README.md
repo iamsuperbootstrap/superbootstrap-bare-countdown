@@ -1,6 +1,8 @@
 # superbootstrap-bare-countdown
 A bootstrapped + jQuery countdown for launching events.
 
+Demo : http://myweb-designs.com/starter/bare-countdown/
+
 ### Bare Count Down
 
 Bare countdown is a minimalist responsive countdown, yet comes with lots of features.
