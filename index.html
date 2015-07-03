@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bare Countdown</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.countdown.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- CountDown block - Days -->
+      <div id="countdown" class="row">
+        <div class="col-xs-6 col-sm-3 countdown-item">
+          <p id="days" class="countdown"></p>
+          <p class="countdown-description">Days</p>
+        </div>
+        <!-- CountDown block - Hours -->
+        <div class="col-xs-6 col-sm-3 countdown-item countdown-item-xs-last">
+          <p id="hours" class="countdown"></p>
+          <p class="countdown-description">Hours</p>
+        </div>
+        <!-- CountDown block - Minutes -->
+        <div class="col-xs-6 col-sm-3 countdown-item">
+          <p id="minutes" class="countdown"></p>
+          <p class="countdown-description">Minutes</p>
+        </div>
+        <!-- CountDown block - Seconds -->
+        <div class="col-xs-6 col-sm-3 countdown-item countdown-item-last">
+          <p id="seconds" class="countdown"></p>
+          <p class="countdown-description">Seconds</p>
+        </div>
+      </div>
+    </div>
+    <!-- Updating live counters -->
+    <script>
+      jQuery(window).load(function () {
+          $('#countdown').countdown("2015/10/10", function (event) {
+              $(this).find("#days").html(event.strftime("%D"));
+              $(this).find("#hours").html(event.strftime("%H"));
+              $(this).find("#minutes").html(event.strftime("%M"));
+              $(this).find("#seconds").html(event.strftime("%S"));
+          });
+
+      });
+    </script>
+  </body>
+</html>
